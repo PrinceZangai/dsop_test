@@ -1,0 +1,21 @@
+mysql:
+  ipPortList:
+    - ip: 10.21.171.134
+      port: 3306
+  user: root
+  password: FengYe@3841
+  ownerName: admin
+  versionName: 8.x
+  serverPath: zxj_test_sensitive
+
+识别任务数据源:
+  ipPortList:
+    - ip: 10.21.171.134
+      port: 3306
+  user: root
+  password: FengYe@3841
+  ownerName: admin
+  versionName: 8.x
+  serverPath: bxj_test_sensitive
+
+

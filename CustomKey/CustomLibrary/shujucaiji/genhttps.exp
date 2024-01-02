@@ -1,0 +1,37 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+spawn keytool -genkey -alias myalias -keyalg RSA -keystore mykeystore.jks
+sleep 0.5
+expect "输入密钥库口令:"
+send "123456\r"
+sleep 0.5
+expect "再次输入新口令:"
+send "123456\r"
+sleep 0.5
+expect "您的名字与姓氏是什么?"
+send "\r"
+sleep 0.5
+expect "您的组织单位名称是什么?"
+send "\r"
+sleep 0.5
+expect "您的组织名称是什么?"
+send "\r"
+sleep 0.5
+expect "您所在的城市或区域名称是什么?"
+send "\r"
+sleep 0.5
+expect "您所在的省/市/自治区名称是什么?"
+send "\r"
+sleep 0.5
+expect "该单位的双字母国家/地区代码是什么?"
+send "\r"
+sleep 0.5
+expect "CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown是否正确?"
+send "y\r"
+sleep 0.5
+expect "*密钥*"
+send "\r"
+
+expect eof
